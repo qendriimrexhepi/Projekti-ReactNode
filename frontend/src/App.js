@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 
@@ -19,9 +20,9 @@ import ProductScreen from './screens/ProductScreen';
          </div>
        </header>
        <main>
+         <Route path="/cart/:id?" component={CartScreen}></Route>
          <Route path="/product/:id" component={ProductScreen}></Route>
          <Route path="/" component={HomeScreen} exact></Route>
-         
        </main>
        <footer className="row center">ecommerce Company 2021</footer>
      </div>
