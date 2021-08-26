@@ -5,7 +5,7 @@
   "description": "vscode://vscode.github-authentication/did-authenticate?windowid=1&code=95d2b9fd3b48a50c9bab&state=d53ca6fc-52b2-4741-a30f-200f8ba6678b",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"    
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/qendriimrexhepi/ecommerce#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0",
     "nodemon": "^2.0.12"
   }
 }
