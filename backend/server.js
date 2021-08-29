@@ -1,10 +1,16 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 
+dotenv.config();
+
 const app = express();
 //const MONGODB_URL = 'mongodb+srv://ecommerce:ecommerce123@cluster0.47y7y.mongodb.net/Cluster0?retryWrites=true&w=majority';
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://ecommerce:ecommerce123@cluster0.47y7y.mongodb.net/Cluster0?retryWrites=true&w=majority', {
   useNewUrlParser: true,
