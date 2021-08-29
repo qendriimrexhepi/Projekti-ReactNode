@@ -17,7 +17,6 @@ const data = {
   ],
     products: [
       {
-        _id: '1',
         name: 'Canon Camera',
         category: 'Electronic',
         image: '/images/p1.jpeg',
@@ -29,7 +28,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '2',
         name: 'Iphone X',
         category: 'Shirts',
         image: '/images/p2.png',
@@ -41,7 +39,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '3',
         name: 'Short Sleve Shirt',
         category: 'Shirts',
         image: '/images/p3.jpg',
@@ -53,7 +50,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '4',
         name: 'Dress',
         category: 'Dress',
         image: '/images/p4.jpg',
@@ -65,7 +61,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '5',
         name: 'Wireless Headphones',
         category: 'Technology',
         image: '/images/p5.jpg',
@@ -77,7 +72,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '6',
         name: 'Wireless Earbuds',
         category: 'Technology',
         image: '/images/p6.png',
@@ -89,7 +83,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '7',
         name: 'Logintech Mouse',
         category: 'Technology',
         image: '/images/p7.png',
@@ -101,7 +94,6 @@ const data = {
         description: 'high quality product',
       },
       {
-        _id: '8',
         name: 'PC Build',
         category: 'Technology',
         image: '/images/p8.jpg',
