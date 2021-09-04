@@ -20,8 +20,8 @@ export default function UserListScreen(props) {
   useEffect(() => {
     dispatch(listUsers());
     dispatch({
-        type: USER_DETAILS_RESET,
-      });
+      type: USER_DETAILS_RESET,
+    });
   }, [dispatch, successDelete]);
   const deleteHandler = (user) => {
     if (window.confirm('Are you sure?')) {

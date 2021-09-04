@@ -5,15 +5,13 @@ import Product from '../models/productModel.js';
 import { isAdmin, isAuth, isSellerOrAdmin } from '../utils.js';
 
 const productRouter = express.Router();
+
 productRouter.get(
   '/',
   expressAsyncHandler(async (req, res) => {
     const seller = req.query.seller || '';
     const sellerFilter = seller ? { seller } : {};
-    const products = await Product.find({ ...sellerFilter }).populate(
-      'seller',
-      'seller.name seller.logo'
-    );
+    const products = await Product.find({ ...sellerFilter });
     res.send(products);
   })
 );
@@ -28,10 +26,7 @@ productRouter.get(
 productRouter.get(
   '/:id',
   expressAsyncHandler(async (req, res) => {
-    const product = await Product.findById(req.params.id).populate(
-      'seller',
-      'seller.name seller.logo seller.rating seller.numReviews'
-    );
+    const product = await Product.findById(req.params.id);
     if (product) {
       res.send(product);
     } else {
@@ -46,6 +41,7 @@ productRouter.post(
   expressAsyncHandler(async (req, res) => {
     const product = new Product({
       name: 'sample name ' + Date.now(),
+      seller: req.user._id,
       image: '/images/p1.jpg',
       price: 0,
       category: 'sample category',

@@ -126,6 +126,7 @@ userRouter.delete(
     }
   })
 );
+
 userRouter.put(
   '/:id',
   isAuth,
