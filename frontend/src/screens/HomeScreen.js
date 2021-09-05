@@ -9,7 +9,7 @@ import { listProducts } from '../actions/productActions';
 import { listTopSellers } from '../actions/userActions';
 import { Link } from 'react-router-dom';
 
-export default function HomeScreen () {
+export default function HomeScreen() {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
   const { loading, error, products } = productList;
@@ -22,11 +22,12 @@ export default function HomeScreen () {
   } = userTopSellersList;
 
   useEffect(() => {
+    dispatch(listProducts({}));
     dispatch(listTopSellers());
   }, [dispatch]);
-    return (
-        <div>
-                <h2>Top Sellers</h2>
+  return (
+    <div>
+      <h2>Top Sellers</h2>
       {loadingSellers ? (
         <LoadingBox></LoadingBox>
       ) : errorSellers ? (
@@ -47,11 +48,11 @@ export default function HomeScreen () {
         </>
       )}
       <h2>Featured Products</h2>
-           {loading ? (
-         <LoadingBox></LoadingBox>
-       ) : error ? (
-         <MessageBox variant="danger">{error}</MessageBox>
-       ) : (
+      {loading ? (
+        <LoadingBox></LoadingBox>
+      ) : error ? (
+        <MessageBox variant="danger">{error}</MessageBox>
+      ) : (
         <>
           {products.length === 0 && <MessageBox>No Product Found</MessageBox>}
           <div className="row center">
@@ -60,7 +61,7 @@ export default function HomeScreen () {
             ))}
           </div>
         </>
-         )}  
-         </div>
-    );
+      )}
+    </div>
+  );
 }
