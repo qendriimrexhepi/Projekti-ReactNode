@@ -29,7 +29,7 @@ const data = {
       },
       {
         name: 'Iphone X',
-        category: 'Shirts',
+        category: 'Smartphones',
         image: '/images/p2.png',
         price: 800,
         countInStock: 20,
